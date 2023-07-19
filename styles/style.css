@@ -73,7 +73,7 @@ nav{
 /* banner section starts here  */
 .banner-container{
     margin:  0 auto;
-    max-width: 85%;
+    max-width: 80%;
     min-width: 50px;
     display: flex;
     justify-content: center;
@@ -224,7 +224,7 @@ nav{
 .img-3{
     margin-bottom: 19px;
 }
-
+/* play btn section starts here */
 .play-btn{
     max-width: 80%;
     margin: 0 auto;
@@ -267,6 +267,54 @@ nav{
     color: #534C64;
     font-size: 18px;
 }
+
+
+/* Games type section */
+.games-type{
+    max-width: 80%;
+    margin:  50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn{
+    border: none;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 0px 25px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+}
+.btn:hover{
+    border: 2px solid blue;
+    background-color: #f43edb;
+    color: #fff;
+    font-size: 15px;
+}
+
+.active{
+    border: 2px solid palevioletred;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive for tablet or medium devices  */
 @media screen and (min-width:576px) and (max-width:960px) {
     .nav-container,.nav-items-container{
         width: 100%;
@@ -325,6 +373,17 @@ nav{
    .play-btn-img,.play-btn-text{
     width: 100%;
     text-align: center;
+   }
+   
+   .games-type,.btn{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3 ,1fr);
+    width: 100%;
+    gap: 2px;
+    font-size: 10px;
+    padding: 0 10px;
+    
    }
 }
 
