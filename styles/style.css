@@ -2,6 +2,8 @@
 
 /* shared style */
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
@@ -96,7 +98,7 @@ nav{
     font-size: 2.2rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: -50px;
+    margin-bottom: 10px;
 }
 .style{
     font-size: 4rem;
@@ -123,6 +125,7 @@ nav{
     border: none;
     gap: 10px;
     cursor: pointer;
+    margin-top: 18px;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
@@ -177,7 +180,7 @@ nav{
     
 }
 .about-description{
-    margin-top: 10px;
+    margin-top: 20px;
     color: #534C64;
     font-size: 15px;
     font-weight: 500;
@@ -199,38 +202,37 @@ nav{
 }
 
 /* Gamer card section starts here */
-.gamer-card{
+
+.card-container{
     max-width: 80%;
     margin: 0 auto;
-    
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.gamer-card>img{
+   width: 300px;
+   height: 350px;
+   /* margin: 0 auto; */
+}
+
+.gamer-card>p{
+    margin: 20px auto;
+    text-align: center;
 }
 .card-title{
     font-size: 2.2rem;
     text-align: center;
+    margin: 10px;
 }
 .card-details{
     text-align: center;
     color: #534C64;
     font-weight: 400;
+    margin: 10px;
 }
 
-.card-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
-   
-    
-}
-.card-container img{
-  width: 290px;
-  height: 340px;
- 
 
-}
-.img-3{
-    margin-bottom: 19px;
-}
 /* play btn section starts here */
 .play-btn{
     max-width: 80%;
@@ -250,29 +252,30 @@ nav{
     position: relative;
 }
 .play-btn-img img{
-    width: 50%;
+    width: 65%;
     height: 100%;
     display: block;
     margin: 0 auto;
 }
 .Rectangle img{
-     width: 150px;
-     height: 160px;
+     width: 120px;
+     height: 130px;
      display: flex;
      justify-content: center;
      align-items: center;
      position: absolute;
-     bottom: -3%;
-     left: 10%;
+     bottom: -8%;
+     left: 1%;
 }
 .title{
     font-size: 2.2rem;
     font-weight: 700;
-  
+    margin-top: 15px;
 }
 .play-btn-description{
     color: #534C64;
     font-size: 18px;
+    margin-top: 15px;
 }
 
 
@@ -352,13 +355,14 @@ nav{
     margin-left: -20px;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 25px;
    
 }
 .footer-title li{
     list-style: none;
 }
 .footer-icons{
-    margin-top: 10px;
+    margin-top: 20px;
     cursor: pointer;
 }
 .fa-brands{
@@ -373,6 +377,7 @@ nav{
 }
 .fa-youtube{
     color: #FF0000;
+    
 }
 .fa-linkedin{
     color:  #0077b5;
@@ -401,7 +406,11 @@ nav{
     margin-top: 20px;
 }
 /* Responsive for laptop devices */
-
+@media screen and (min-width:960px) and (max-width:1440px){
+    .gamer-card{
+        width: 100%;
+    }
+}
 
 /* Responsive for tablet or medium devices  */
 @media screen and (min-width:576px) and (max-width:960px) {
@@ -416,9 +425,11 @@ nav{
         
     }
     .card-container{
+        
         display: grid;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         grid-template-columns: repeat(2,1fr);
+        text-align: center;
     }
 }
 
@@ -462,6 +473,7 @@ nav{
     }
     .card-container{
         width: 100%;
+        text-align: center;
     }
     .play-btn{
         flex-direction: column-reverse;
@@ -469,6 +481,7 @@ nav{
    .play-btn-img,.play-btn-text{
     width: 100%;
     text-align: center;
+    margin-top: 30px;
    }
    
    .games-type,.btn{
@@ -481,12 +494,16 @@ nav{
     padding: 0 10px;
     
    }
-   .footer-title>ul{
+   .footer{
     width: 100%;
+   }
+   .footer-title>ul{
+    font-size: medium;
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: repeat(3,1fr);
     text-align: center;
+    margin-top: 15px;
    }
    .footer-icons{
     width: 100%;
@@ -494,6 +511,7 @@ nav{
     flex-wrap: wrap;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
+    margin-top: 15px;
    }
    #Footer-description{
     width: 100%;
@@ -501,7 +519,7 @@ nav{
     flex-wrap: wrap;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
    }
 }
 
